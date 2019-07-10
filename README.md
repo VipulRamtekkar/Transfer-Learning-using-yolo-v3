@@ -26,6 +26,9 @@ While training yolo expects the images should be presented along with the ground
 ```
 <object class> <bbox_x/bbox_width> <bbox_y/image_height> <bbox_width/image_width> <bbox_height/image_height>
 ```
+Thus, you will get scaled values from 0 to 1 for the bbox values. Eg:
+0 0.031 0.057 0.5 0.7
+
 4. Divide your training data into subsets of training data and test data, a rule of thumb could be keeping 90 and 10 ratio. Now create a training.txt and test.txt files that contain all the addresses of the image files in your folder. 
 
 5. Now we are required to create three files to initiate training darknet.data, class.names and yolo.cfg. 
