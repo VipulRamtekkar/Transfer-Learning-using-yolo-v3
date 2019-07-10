@@ -24,7 +24,7 @@ wget https://pjreddie.com/media/files/darknet53.conv.74
 While training yolo expects the images should be presented along with the ground truth. The format for the ground truth is very specfic and is as follows:
 
 ```
-<object class> <bbox_x/bbox_width> <bbox_y/image_height> <bbox_width/image_width> <bbox_height/image_height>
+<object class number> <bbox_x/bbox_width> <bbox_y/image_height> <bbox_width/image_width> <bbox_height/image_height>
 ```
 Thus, you will get scaled values from 0 to 1 for the bbox values. Eg:
 0 0.031 0.057 0.5 0.7
@@ -34,7 +34,7 @@ Thus, you will get scaled values from 0 to 1 for the bbox values. Eg:
 5. Now we are required to create three files to initiate training darknet.data, class.names and yolo.cfg. 
 The first file tells about the location of the images and where to store the weights, the second tells about the classes in our dataset and the third tells about the configuration. You can find multiple config files in the **cfg** subfolder in the darknet folder. You can find sample files of all the three in the repository. Saving all these files in the darknet folder.
 
-6. Now you need to tweak the configuration file according to your need by first selecting a file from the **cfg** folder and then subsequently changing the number of classes to the number of classes in your dataset in all the *[yolo] blocks* and changing the number of filters in the [convolution] blocks **just before** the yolo blocks by using the formula:
+6. Now you need to tweak the configuration file according to your need by first selecting a file from the **cfg** folder and then subsequently **changing the number of classes to the number of classes in your dataset** in all the *[yolo] blocks* and changing the number of filters in the [convolution] blocks **just before** the yolo blocks by using the formula:
 filter = num/3*(classes+5) where the default num = 9. 
 
 7. Now, you are all set initiate the training by using the command from inside the darknet folder:
