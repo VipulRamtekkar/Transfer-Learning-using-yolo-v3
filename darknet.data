@@ -1,5 +1,5 @@
-classes = 12
-train = ./visdrone_train.txt
-valid = ./visdrone_test.txt
+classes = 2 # Number of classes in labelled dataset
+train = ./train.txt #Text file of the addresses of the training images 
+valid = ./test.txt # Text file of the addresses of the testing images
 names = ./classes.names
-backup = ./../weights/
+backup = ./weights/
