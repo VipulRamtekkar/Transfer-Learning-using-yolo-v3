@@ -1,0 +1,5 @@
+classes = 12
+train = ./visdrone_train.txt
+valid = ./visdrone_test.txt
+names = ./classes.names
+backup = ./../weights/
